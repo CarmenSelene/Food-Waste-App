@@ -1,9 +1,7 @@
 # Food-Buddy
 
-Welcome to our Startup Project.
+Welcome to our Sustainability Startup Project.
 
-
-Keep upto date with the latest code we have
  
 THis is our team:
 * Hussein
