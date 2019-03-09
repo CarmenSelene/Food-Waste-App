@@ -7,5 +7,5 @@ THis is our team:
 * Hussein
 * Arjun
 * Ammar
-* Shaylin
+* Saryn
 * Brodie
