@@ -7,7 +7,7 @@ Keep upto date with the latest code we have
  
 THis is our team:
 * Hussein
-*Arjun
-*Ammar
-*Shaylin
-*Brodie
+* Arjun
+* Ammar
+* Shaylin
+* Brodie
