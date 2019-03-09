@@ -6,7 +6,7 @@ Welcome to our Startup Project.
 Keep upto date with the latest code we have
  
 THis is our team:
-*Hussein
+* Hussein
 *Arjun
 *Ammar
 *Shaylin
