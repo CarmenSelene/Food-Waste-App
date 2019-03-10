@@ -1,0 +1,155 @@
+Apples
+Apricots
+Asparagus
+Avocados
+Bananas
+Broccoli
+Cabbage
+Carrots
+Celery
+Collard Greens
+Garlic
+Kale
+Kiwifruit
+Lemons
+Lettuce
+Limes
+Mushrooms
+Onions
+Peas
+Pineapples
+Radishes
+Rhubarb
+Spinach
+Strawberries
+Swiss Chard
+Turnips
+Summer
+Apples
+Apricots
+Avocados
+Bananas
+Beets
+Bell Peppers
+Blackberries
+Blueberries
+Cantaloupe
+Carrots
+Celery
+Cherries
+Corn
+Cucumbers
+Eggplant
+Garlic
+Green Beans
+Honeydew Melon
+Lemons
+Lima Beans
+Limes
+Mangos
+Okra
+Peaches
+Plums
+Raspberries
+Strawberries
+Summer Squash
+Tomatillos
+Tomatoes
+Watermelon
+Zucchini
+Ginger
+Grapes
+Green Beans
+Kale
+Kiwifruit
+Lemons
+Lettuce
+Limes
+Mangos
+Mushrooms
+Onions
+Parsnips
+Pears
+Peas
+Pineapples
+Potatoes
+Pumpkins
+Radishes
+Raspberries
+Rutabagas
+Spinach
+Sweet Potatoes & Yams
+Swiss Chard
+Turnips
+Winter Squash
+almond
+apple
+avocado
+bacon
+banana
+beef
+butter
+cabbage
+carrot
+cassava
+cheese
+chicken
+chickpea
+chocolate bar brands
+chocolate-covered foods
+choux pastry
+clam
+coconut
+coconut milk
+coffee
+crab
+fried dough foods
+egg
+eggplant
+fish
+Fish paste
+fish sauces
+raw fish
+edible flowers
+fruit
+goat
+ham
+lamb
+legume
+lemon and drinks
+buckwheat
+cherry
+grape
+meat
+squash and pumpkin
+maize
+maple
+melon
+mushroom
+noodle
+onion
+pasta
+peanut
+plum
+poppy seed pastries
+pork
+potato
+ramen
+rice
+rice varieties
+sausage
+seafood
+sesame seed
+shrimp
+soy-based foods
+fermented soy products
+strawberry
+sushi and sashimi ingredients
+toast
+tofu
+tomato
+tortilla-based
+veal
+vegetable
+vegetable soups
+yogurt
