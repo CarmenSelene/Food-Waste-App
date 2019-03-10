@@ -1,11 +1,3 @@
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "password",
-    database: "projectTEST"
-});
 
 if (process.argv[2] === "vegetable") {
     vegetableAdd(process.argv[3]);

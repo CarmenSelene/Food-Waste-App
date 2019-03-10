@@ -1,7 +1,12 @@
 var express = require("express");
+var exphbs = require("express-handlebars");
 var app = express();
 
 var PORT = process.env.PORT || 8080;
+
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -24,13 +29,13 @@ con.connect(function (err) {
 });
 
 app.get("/", function (req, res) {
-    connection.query("SELECT * FROM projecttest.testone;", function (err, data) {
+    con.query("SELECT * FROM projecttest.testone;", function (err, data) {
         if (err) throw err;
         // Test it
         console.log(data);
         // Test it
         // return res.send(data);
-        res.render("index", { tasks: data });
+        res.render("index", {data: data});
     });
 });
 
