@@ -1,3 +1,11 @@
+var express = require("express");
+var app = express();
+
+var PORT = process.env.PORT || 8080;
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
@@ -7,64 +15,25 @@ var con = mysql.createConnection({
     database: "projectTEST"
 });
 
-if (process.argv[2] === "vegetable") {
-    vegetableAdd(process.argv[3]);
-} else if (process.argv[2] === "herb") {
-    herbAdd(process.argv[3]);
-} else if (process.argv[2] === "dairy") {
-    dairyAdd(process.argv[3]);
-} else if (process.argv[2] === "meat") {
-    meatAdd(process.argv[3]);
-} else {
-    console.log(
-        "Input not recognized"
-    );
-}
+con.connect(function (err) {
+    if (err) {
+        console.error("error connecting: " + err.stack);
+        return;
+    }
+    console.log("connected as id " + con.threadId);
+});
 
-function vegetableAdd(x) {
-    con.connect(function (err) {
+app.get("/", function (req, res) {
+    connection.query("SELECT * FROM projecttest.testone;", function (err, data) {
         if (err) throw err;
-        console.log("Connected!");
-        var sql = "INSERT INTO testOne (FoodCategory, FoodItem, TimestampQ) VALUES ('vegetable', ? , now())";
-        con.query(sql, x, function (err, result) {
-            if (err) throw err;
-            console.log("1 record inserted", result);
-        });
+        // Test it
+        console.log(data);
+        // Test it
+        // return res.send(data);
+        res.render("index", { tasks: data });
     });
-}
+});
 
-function herbAdd(x) {
-    con.connect(function (err) {
-        if (err) throw err;
-        console.log("Connected!");
-        var sql = "INSERT INTO testOne (FoodCategory, FoodItem, TimestampQ) VALUES ('herb', ? , now())";
-        con.query(sql, x, function (err, result) {
-            if (err) throw err;
-            console.log("1 record inserted", result);
-        });
-    });
-}
-
-function dairyAdd(x) {
-    con.connect(function (err) {
-        if (err) throw err;
-        console.log("Connected!");
-        var sql = "INSERT INTO testOne (FoodCategory, FoodItem, TimestampQ) VALUES ('dairy', ? , now())";
-        con.query(sql, x, function (err, result) {
-            if (err) throw err;
-            console.log("1 record inserted", result);
-        });
-    });
-}
-
-function meatAdd(x) {
-    con.connect(function (err) {
-        if (err) throw err;
-        console.log("Connected!");
-        var sql = "INSERT INTO testOne (FoodCategory, FoodItem, TimestampQ) VALUES ('meat', ? , now())";
-        con.query(sql, x, function (err, result) {
-            if (err) throw err;
-            console.log("1 record inserted", result);
-        });
-    });
-}
+app.listen(PORT, function () {
+    console.log("App listening on PORT: " + PORT);
+});
