@@ -10,3 +10,5 @@ Here is our team:
 * Ammar
 * Saryn
 * Brodie
+
+https://devpost.com/software/food-buddy-ognaye
