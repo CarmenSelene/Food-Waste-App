@@ -1,5 +1,8 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
+var Handlebars = require("handlebars");
+var MomentHandler = require("handlebars.moment");
+MomentHandler.registerHelpers(Handlebars);
 var app = express();
 
 var PORT = process.env.PORT || 8080;
@@ -18,8 +21,12 @@ var con = mysql.createConnection({
     host: "localhost",
     user: "root",
     password: "password",
-    database: "projectTEST"
+    database: "food_buddy"
 });
+
+var switchTable = {
+
+};
 
 con.connect(function (err) {
     if (err) {
@@ -30,12 +37,9 @@ con.connect(function (err) {
 });
 
 app.get("/", function (req, res) {
-    con.query("SELECT * FROM projecttest.testone;", function (err, data) {
+    con.query("SELECT * FROM food_buddy.userID;", function (err, data) {
         if (err) throw err;
-        // Test it
         console.log(data);
-        // Test it
-        // return res.send(data);
         res.render("index", {data: data});
     });
 });

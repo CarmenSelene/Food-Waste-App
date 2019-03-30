@@ -1,3 +1,11 @@
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "password",
+    database: "food_buddy"
+});
 
 if (process.argv[2] === "vegetable") {
     vegetableAdd(process.argv[3]);
@@ -14,10 +22,11 @@ if (process.argv[2] === "vegetable") {
 }
 
 function vegetableAdd(x) {
+    x = x.toUpperCase();
     con.connect(function (err) {
         if (err) throw err;
         console.log("Connected!");
-        var sql = "INSERT INTO testOne (FoodCategory, FoodItem, TimestampQ) VALUES ('vegetable', ? , now())";
+        var sql = "INSERT INTO vegetable (FoodItem, TimestampQ) VALUES ( ? , now())";
         con.query(sql, x, function (err, result) {
             if (err) throw err;
             console.log("1 record inserted", result);
@@ -26,10 +35,11 @@ function vegetableAdd(x) {
 }
 
 function herbAdd(x) {
+    x = x.toUpperCase();
     con.connect(function (err) {
         if (err) throw err;
         console.log("Connected!");
-        var sql = "INSERT INTO testOne (FoodCategory, FoodItem, TimestampQ) VALUES ('herb', ? , now())";
+        var sql = "INSERT INTO herb (FoodItem, TimestampQ) VALUES ( ? , now())";
         con.query(sql, x, function (err, result) {
             if (err) throw err;
             console.log("1 record inserted", result);
@@ -38,10 +48,11 @@ function herbAdd(x) {
 }
 
 function dairyAdd(x) {
+    x = x.toUpperCase();
     con.connect(function (err) {
         if (err) throw err;
         console.log("Connected!");
-        var sql = "INSERT INTO testOne (FoodCategory, FoodItem, TimestampQ) VALUES ('dairy', ? , now())";
+        var sql = "INSERT INTO dairy (FoodItem, TimestampQ) VALUES ( ? , now())";
         con.query(sql, x, function (err, result) {
             if (err) throw err;
             console.log("1 record inserted", result);
@@ -50,10 +61,11 @@ function dairyAdd(x) {
 }
 
 function meatAdd(x) {
+    x = x.toUpperCase();
     con.connect(function (err) {
         if (err) throw err;
         console.log("Connected!");
-        var sql = "INSERT INTO testOne (FoodCategory, FoodItem, TimestampQ) VALUES ('meat', ? , now())";
+        var sql = "INSERT INTO meat (FoodItem, TimestampQ) VALUES ( ? , now())";
         con.query(sql, x, function (err, result) {
             if (err) throw err;
             console.log("1 record inserted", result);
@@ -61,16 +73,3 @@ function meatAdd(x) {
     });
 }
 
-function getData() {
-    con.connect(function (err) {
-        if (err) throw err;
-        console.log("Connected!");
-        con.query("SELECT * FROM projecttest.testone", function (err, result) {
-            if (err) throw err;
-            let Cat = result.FoodCategory;
-            let Food = result.FoodItem;
-            let Time = result.TimestampQ;
-            console.log(Cat, Food, Time);
-        });
-    });
-}

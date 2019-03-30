@@ -1,14 +1,19 @@
-#banner {
-    margin: auto;
-    width: 80%;
-    left: 0px;
-    right: 0px;
+#banner img{
+    width: 350px;
+    float: right;
+    background-image: url("./foodbuddyDEMO.jpg");
 }
 
-#banner img{
-    width: 100%;
-    left: 0px;
-    right: 0px;
-    background-image: url("./foodbuddyDEMO.jpg");
-    height: 300px;
+ul {
+    text-align: left;
+}
+
+li {
+    list-style: none;
+}
+
+.mainContainer {
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
 }
