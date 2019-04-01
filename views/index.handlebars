@@ -26,12 +26,48 @@
   <div class="mainContainer">
     <div>
       {{#each data}}
+      {{#if vegetable}}
+      <strong>Vegetable</strong>
       <ul>
         <li><strong>X - {{ recordName }} - X</strong></li>
         <li>Purchased: </strong>{{ moment recorded "from" dfrom}}</li>
         <li>First Alert In: {{ moment vegFirstAlert "from" dfrom}}</li>
         <li>Second Alert In: {{ moment vegSecondAlert "from" dfrom}}</li>
       </ul>
+      {{else if herb}}
+      <strong>Herb</strong>
+      <ul>
+        <li><strong>X - {{ recordName }} - X</strong></li>
+        <li>Purchased: </strong>{{ moment recorded "from" dfrom}}</li>
+        <li>First Alert In: {{ moment herbFirstAlert "from" dfrom}}</li>
+        <li>Second Alert In: {{ moment herbSecondAlert "from" dfrom}}</li>
+      </ul>
+      {{else if meat}}
+      <strong>Meat</strong>
+      <ul>
+        <li><strong>X - {{ recordName }} - X</strong></li>
+        <li>Purchased: </strong>{{ moment recorded "from" dfrom}}</li>
+        <li>First Alert In: {{ moment meatFirstAlert "from" dfrom}}</li>
+        <li>Second Alert In: {{ moment meatSecondAlert "from" dfrom}}</li>
+      </ul>
+      {{else if fish}}
+      <strong>Fish</strong>
+      <ul>
+        <li><strong>X - {{ recordName }} - X</strong></li>
+        <li>Purchased: </strong>{{ moment recorded "from" dfrom}}</li>
+        <li>First Alert In: {{ moment fishFirstAlert "from" dfrom}}</li>
+        <li>Second Alert In: {{ moment fishSecondAlert "from" dfrom}}</li>
+      </ul>
+      {{else if dairy}}
+      <strong>Dairy</strong>
+      <ul>
+        <li><strong>X - {{ recordName }} - X</strong></li>
+        <li>Purchased: </strong>{{ moment recorded "from" dfrom}}</li>
+        <li>First Alert In: {{ moment dairyFirstAlert "from" dfrom}}</li>
+        <li>Second Alert In: {{ moment dairySecondAlert "from" dfrom}}</li>
+      </ul>
+
+      {{/if}}
       {{/each}}
     </div>
   </div>
