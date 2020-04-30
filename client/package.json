@@ -27,7 +27,7 @@
     },
     "dependencies": {
         "bootstrap": "4.2.1",
-        "jquery": "3.4.0",
+        "jquery": "3.5.0",
         "mysql": "^2.16.0"
     },
     "devDependencies": {
