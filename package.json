@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.1",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "express-handlebars": "^3.0.2",
     "fs": "0.0.1-security",
     "handlebars.moment": "^1.0.4",
